@@ -137,11 +137,8 @@ const server = http.createServer((req, res) => {
         });
     }
 
-
-    // -------------------------------
     // GET /students
     // Display Student Records
-    // -------------------------------
     else if (req.method === "GET" && req.url === "/students") {
 
         fs.readFile(FILE, "utf8", (err, data) => {
@@ -220,10 +217,8 @@ const server = http.createServer((req, res) => {
         });
     }
 
-
-    // -------------------------------
     // Invalid Route
-    // -------------------------------
+    
     else {
 
         res.writeHead(404, {
@@ -239,9 +234,9 @@ const server = http.createServer((req, res) => {
 });
 
 
-// -------------------------------
+ 
 // Start Server
-// -------------------------------
+ 
 
 server.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
